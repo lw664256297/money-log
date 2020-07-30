@@ -82,48 +82,6 @@
                 </van-col>
               </van-col>
             </van-row>
-
-            <van-row
-              class="money-row-list money-al-center"
-              type="flex"
-              justify="space-between"
-            >
-              <van-col span="2" class="icon-bg money-log-center">
-                <van-icon name="shopping-cart-o" color="#fff" size="25" />
-              </van-col>
-              <van-col span="22" class="money-right border-s" offset="1">
-                <van-col span="16" class="money-list-title">
-                  <p>购物</p>
-                  <div class="money-list-time-bz">
-                    <span>08:00</span> | <span>成都撒大</span>
-                  </div>
-                </van-col>
-                <van-col span="8" class="money-right">
-                  <span>-8222.00</span>
-                </van-col>
-              </van-col>
-            </van-row>
-
-            <van-row
-              class="money-row-list money-al-center"
-              type="flex"
-              justify="space-between"
-            >
-              <van-col span="2" class="icon-bg money-log-center">
-                <van-icon name="shopping-cart-o" color="#fff" size="25" />
-              </van-col>
-              <van-col span="22" class="money-right" offset="1">
-                <van-col span="16" class="money-list-title">
-                  <p>购物</p>
-                  <div class="money-list-time-bz">
-                    <span>08:00</span> | <span>成都撒大</span>
-                  </div>
-                </van-col>
-                <van-col span="8" class="money-right">
-                  <span>-8222.00</span>
-                </van-col>
-              </van-col>
-            </van-row>
           </div>
         </van-row>
       </van-col>
