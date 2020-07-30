@@ -21,7 +21,7 @@ export default class NavHead extends Vue {
   @Prop({
     type: String, // type: [String , Number]
     default: () => {
-      return "财政报告";
+      return "记账本";
     },
   })
   protected title: string;

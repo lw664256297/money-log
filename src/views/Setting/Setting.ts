@@ -1,26 +1,19 @@
 /**
- * Hello
+ * Setting
  * @author zhangds <zhudachang0832@gmail.com>
- * @date 2020-06-22 11:52:57
+ * @date 2020-07-29 16:26:54
  * @since 0.1.0
  */
 
-import Vue from "@/components/base";
-import { Component } from "vue-property-decorator";
-import { Button } from "vant";
-import template from "./Hello.vue";
-
-// 兼容组件写法
-const btn: any = Button;
+import Vue from '@/components/base';
+import { Component } from 'vue-property-decorator';
+import template from './Setting.vue';
 
 @Component({
-  name: "Hello",
+  name: 'Setting',
   mixins: [template],
-  components: {
-    [Button.name]: btn,
-  },
 })
-export default class Hello extends Vue {
+export default class Setting extends Vue {
   //#region datas ******************************/
   //#endregion datas ***************************/
 

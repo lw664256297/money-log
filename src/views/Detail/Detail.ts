@@ -1,24 +1,19 @@
 /**
- * App
+ * Detail
  * @author zhangds <zhudachang0832@gmail.com>
- * @date 2020-06-22 11:32:06
+ * @date 2020-07-30 10:06:53
  * @since 0.1.0
  */
 
-import Vue from "@/components/base";
-import { Component } from "vue-property-decorator";
-import template from "./App.vue";
-import NavHead from "@/components/NavHead";
-import Menu from "@/components/Menu";
+import Vue from '@/components/base';
+import { Component } from 'vue-property-decorator';
+import template from './Detail.vue';
+
 @Component({
-  name: "App",
+  name: 'Detail',
   mixins: [template],
-  components: {
-    NavHead,
-    Menu,
-  },
 })
-export default class App extends Vue {
+export default class Detail extends Vue {
   //#region datas ******************************/
   //#endregion datas ***************************/
 

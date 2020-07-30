@@ -6,7 +6,9 @@
  -->
 <template>
   <div class="App-main">
-    <router-view></router-view>
+    <keep-alive :include="['Home', 'Login']">
+      <router-view />
+    </keep-alive>
   </div>
 </template>
 <style src="./App.scss" lang="scss" scoped></style>

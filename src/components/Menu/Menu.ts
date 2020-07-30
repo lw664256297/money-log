@@ -1,29 +1,28 @@
 /**
- * Login
+ * Menu
  * @author zhangds <zhudachang0832@gmail.com>
- * @date 2020-07-16 11:32:50
+ * @date 2020-07-29 15:06:03
  * @since 0.1.0
  */
 
 import Vue from "@/components/base";
-import { Component } from "vue-property-decorator";
-import template from "./Login.vue";
+import { Component, Prop } from "vue-property-decorator";
+import template from "./Menu.vue";
 
 @Component({
-  name: "Login",
+  name: "Menu",
   mixins: [template],
-  components: {},
 })
-export default class Login extends Vue {
+export default class Menu extends Vue {
   //#region datas ******************************/
-  protected tel: string = "";
-  protected pwd: string = "";
-  // 按钮loading
-  protected isLoading: boolean = false;
-  protected isDisabled: boolean = false;
   //#endregion datas ***************************/
 
   //#region props ******************************/
+  @Prop({
+    type: Number,
+    default: 0,
+  })
+  protected MenuActive: number;
   //#endregion props ***************************/
 
   //#region vuex *******************************/
@@ -46,29 +45,6 @@ export default class Login extends Vue {
   //#endregion event handler *******************/
 
   //#region methods ****************************/
-  protected async onSubmit() {
-    this.isLoading = true;
-    this.isDisabled = true;
-    const parameter = {
-      tel: this.tel,
-      pwd: this.pwd,
-    };
-    const res = await this.api.user.Login(parameter);
-    if (res.code === 200) {
-      // 存储用户信息
-      this.$store.commit("user/SET_USERNAME", res.data);
-      // 存储用户token
-      this.$store.commit("user/SET_TOKEN", res.data.token);
-
-      this.$notify({ type: "success", message: "登陆成功" });
-      this.$router.push({ path: "/" });
-
-      this.isLoading = false;
-      this.isDisabled = false;
-    } else {
-      this.isLoading = false;
-      this.isDisabled = false;
-    }
-  }
+  protected onChangeMenu() {}
   //#endregion methods *************************/
 }

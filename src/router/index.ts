@@ -4,9 +4,10 @@ import LS from "../common/util/ls";
 
 // routes
 /** auto import */
+import StatisticsRoute from "./Statistics";
+import DetailRoute from "./Detail";
+import SettingRoute from "./Setting";
 import LoginRoute from "./Login";
-import HomeRoute from "./Home";
-import HelloRoute from "./Hello";
 import { IRouterConfigCustom } from "../../typings/interface";
 
 Vue.use(Router);
@@ -14,9 +15,10 @@ Vue.use(Router);
 // prettier-ignore
 const routes: IRouterConfigCustom[] = []
   /** auto concat */
+    .concat(StatisticsRoute)
+    .concat(DetailRoute)
+    .concat(SettingRoute)
     .concat(LoginRoute)
-    .concat(HomeRoute)
-    .concat(HelloRoute)
     .concat([]);
 
 const rs = new Router({
@@ -40,7 +42,6 @@ rs.beforeEach((to, from, next) => {
     document.title = to.meta.title;
   }
   const isLogin = LS.get("userInfo");
-  console.log("-----------isLogin", isLogin);
   if (isLogin) {
     next();
   } else {

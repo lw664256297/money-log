@@ -1,7 +1,7 @@
 /**
- * Hello
+ * Statistics
  * @author zhangds <zhudachang0832@gmail.com>
- * @date 2020-06-22 11:54:20
+ * @date 2020-07-30 10:07:28
  * @since 0.1.0
  */
 import { IRouterConfigCustom } from "../../typings/interface";
@@ -17,16 +17,16 @@ function getView(name: string) {
         resolve(require(`@/views/${name}/index.ts`));
       },
       reject,
-      "Hello"
+      "Statistics"
     );
   };
 }
 
 const routes: IRouterConfigCustom[] = [
   {
-    name: "Hello",
-    path: "/Hello",
-    component: getView("Hello"),
+    name: "Statistics",
+    path: "/Statistics",
+    component: getView("Statistics"),
   },
 ];
 

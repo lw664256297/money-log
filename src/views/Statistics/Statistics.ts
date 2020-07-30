@@ -1,27 +1,20 @@
 /**
- * Home
+ * Statistics
  * @author zhangds <zhudachang0832@gmail.com>
- * @date 2020-07-16 11:35:40
+ * @date 2020-07-30 10:07:17
  * @since 0.1.0
  */
 
-import Vue from "@/components/base";
-import { Component } from "vue-property-decorator";
-import template from "./Home.vue";
-import NavHead from "@/components/NavHead";
+import Vue from '@/components/base';
+import { Component } from 'vue-property-decorator';
+import template from './Statistics.vue';
 
 @Component({
-  name: "Home",
+  name: 'Statistics',
   mixins: [template],
-  components: {
-    NavHead,
-  },
 })
-export default class Home extends Vue {
+export default class Statistics extends Vue {
   //#region datas ******************************/
-  protected isLogin: boolean = true;
-  protected title: string = "财政报告";
-  protected leftTexts: string = "";
   //#endregion datas ***************************/
 
   //#region props ******************************/
