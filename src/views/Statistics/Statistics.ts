@@ -5,12 +5,12 @@
  * @since 0.1.0
  */
 
-import Vue from '@/components/base';
-import { Component } from 'vue-property-decorator';
-import template from './Statistics.vue';
+import Vue from "@/components/base";
+import { Component } from "vue-property-decorator";
+import template from "./Statistics.vue";
 
 @Component({
-  name: 'Statistics',
+  name: "Statistics",
   mixins: [template],
 })
 export default class Statistics extends Vue {
@@ -30,7 +30,9 @@ export default class Statistics extends Vue {
   //#endregion watchers ************************/
 
   //#region life cycle *************************/
-  protected created() {}
+  protected created() {
+    console.log("进入统计");
+  }
   //#endregion life cycle **********************/
 
   //#region hooks ******************************/

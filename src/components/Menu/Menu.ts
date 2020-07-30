@@ -15,14 +15,10 @@ import template from "./Menu.vue";
 })
 export default class Menu extends Vue {
   //#region datas ******************************/
+  protected MenuActive: number = 0;
   //#endregion datas ***************************/
 
   //#region props ******************************/
-  @Prop({
-    type: Number,
-    default: 0,
-  })
-  protected MenuActive: number;
   //#endregion props ***************************/
 
   //#region vuex *******************************/

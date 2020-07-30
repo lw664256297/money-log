@@ -4,3 +4,82 @@
  * @date 2020-07-30 10:06:53
  * @since 0.1.0
  */
+.detail-head-type {
+  height: auto;
+  background-color: #1989fa;
+  padding: 5px 15px;
+}
+.head-money-log {
+  background-color: #1989fa;
+  padding: 5px 15px;
+}
+
+.head-money-log span {
+  color: #fff;
+  font-size: 13px;
+}
+.box-center {
+  display: flex;
+  align-items: center;
+}
+.money-log-box {
+  background-color: #f0f0f0;
+}
+.money-log-list {
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 5px;
+}
+.money-log-head {
+  background-color: #f0f0f085;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.money-log-title-s {
+  font-size: 12px;
+  padding: 2px;
+  background-color: #cccccc3d;
+}
+.money-al-center {
+  display: flex;
+  align-items: center;
+}
+.money-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.money-log-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.money-log-main {
+  background-color: #fff;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+.icon-bg {
+  width: 40px;
+  height: 40px;
+  background-color: #1989fa;
+  border-radius: 50%;
+}
+.money-row-list {
+  padding: 15px 10px 0;
+}
+
+.money-list-title p {
+  margin: 0;
+}
+.money-list-time-bz {
+  font-size: 12px;
+  color: #ccc;
+  padding: 5px 0;
+}
+.border-s {
+  border-bottom: 1px solid #f0f0f0f0;
+  padding-bottom: 10px;
+}

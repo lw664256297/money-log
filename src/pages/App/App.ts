@@ -6,7 +6,7 @@
  */
 
 import Vue from "@/components/base";
-import { Component } from "vue-property-decorator";
+import { Component, Watch } from "vue-property-decorator";
 import template from "./App.vue";
 import NavHead from "@/components/NavHead";
 import Menu from "@/components/Menu";
@@ -20,6 +20,8 @@ import Menu from "@/components/Menu";
 })
 export default class App extends Vue {
   //#region datas ******************************/
+  protected leftTexts: string = "";
+  protected zIndex: number = 99;
   //#endregion datas ***************************/
 
   //#region props ******************************/
@@ -32,6 +34,10 @@ export default class App extends Vue {
   //#endregion computed ************************/
 
   //#region watchers ***************************/
+  // @Watch("child")
+  // onChangeValue(newVal: string, oldVal: string) {
+  //   // todo...
+  // }
   //#endregion watchers ************************/
 
   //#region life cycle *************************/

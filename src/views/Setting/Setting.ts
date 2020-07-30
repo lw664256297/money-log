@@ -5,12 +5,12 @@
  * @since 0.1.0
  */
 
-import Vue from '@/components/base';
-import { Component } from 'vue-property-decorator';
-import template from './Setting.vue';
+import Vue from "@/components/base";
+import { Component } from "vue-property-decorator";
+import template from "./Setting.vue";
 
 @Component({
-  name: 'Setting',
+  name: "Setting",
   mixins: [template],
 })
 export default class Setting extends Vue {
@@ -30,7 +30,9 @@ export default class Setting extends Vue {
   //#endregion watchers ************************/
 
   //#region life cycle *************************/
-  protected created() {}
+  protected created() {
+    console.log("进入设置");
+  }
   //#endregion life cycle **********************/
 
   //#region hooks ******************************/

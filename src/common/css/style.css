@@ -1,0 +1,11 @@
+.App-main .van-nav-bar {
+  background-color: #1989fa;
+}
+
+.App-main .van-nav-bar__title {
+  color: #fff;
+}
+
+.detail-head-type .van-button {
+  background-color: rgba(255, 255, 255, 0.1);
+}

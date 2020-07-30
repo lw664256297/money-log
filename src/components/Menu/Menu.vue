@@ -6,9 +6,11 @@
  -->
 <template>
   <div class="Menu-main">
-    <van-tabbar v-model="MenuActive" @change="onChangeMenu">
-      <van-tabbar-item icon="home-o" to="/Detail">明细</van-tabbar-item>
-      <van-tabbar-item icon="search" to="/Statistics">统计</van-tabbar-item>
+    <van-tabbar v-model="MenuActive">
+      <van-tabbar-item icon="home-o" to="/">明细</van-tabbar-item>
+      <van-tabbar-item icon="chart-trending-o" to="/Statistics"
+        >统计</van-tabbar-item
+      >
       <van-tabbar-item icon="setting-o" to="/Setting">设置</van-tabbar-item>
     </van-tabbar>
   </div>

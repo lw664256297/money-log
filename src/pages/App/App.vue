@@ -6,9 +6,18 @@
  -->
 <template>
   <div class="App-main">
-    <keep-alive :include="['Home', 'Login']">
+    <NavHead
+      :leftArrow="false"
+      :fixed="true"
+      :placeholder="true"
+      :border="false"
+      :leftTexts="leftTexts"
+      :zIndex="zIndex"
+    ></NavHead>
+    <keep-alive :include="['Login']">
       <router-view />
     </keep-alive>
+    <Menu></Menu>
   </div>
 </template>
 <style src="./App.scss" lang="scss" scoped></style>

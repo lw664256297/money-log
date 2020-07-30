@@ -25,7 +25,7 @@ function getView(name: string) {
 const routes: IRouterConfigCustom[] = [
   {
     name: "Detail",
-    path: "/Detail",
+    path: "/",
     component: getView("Detail"),
   },
 ];
