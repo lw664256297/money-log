@@ -18,3 +18,18 @@
 .detail-head-type .van-button {
   background-color: rgba(255, 255, 255, 0.1);
 }
+.flex-log-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.flex-box-center {
+  display: flex;
+  align-items: center;
+}
+.icon-bg-color-bule {
+  background-color: #1989fa !important;
+}
+.icon-bg-color-yellow {
+  background-color: #f4b400 !important;
+}

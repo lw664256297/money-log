@@ -4,3 +4,68 @@
  * @date 2020-07-31 15:55:17
  * @since 0.1.0
  */
+.moneyLogPop {
+  margin-top: 50px;
+}
+
+.time-bg {
+  background-color: rgba(204, 204, 204, 0.685);
+  border-radius: 10px;
+  padding: 5px;
+}
+.money-fh {
+  font-size: 25px;
+  font-weight: bold;
+  float: right;
+  padding-top: 20px;
+}
+.type-ico-box {
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.typeIcon {
+  min-width: 600px;
+  height: 50px;
+}
+.typeIcon li {
+  width: auto;
+  float: left;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.typeIcon li p {
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.outincome-icon-bg {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outcome-icon-bg {
+  width: 30px;
+  height: 30px;
+  background-color: #1989fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.remarkInput {
+  margin-left: 20px;
+  height: 40px;
+  width: 250px;
+  border: 1px solid #f0f0ff;
+}

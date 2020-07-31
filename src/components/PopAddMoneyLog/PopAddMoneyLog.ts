@@ -15,7 +15,41 @@ import template from "./PopAddMoneyLog.vue";
 })
 export default class PopAddMoneyLog extends Vue {
   //#region datas ******************************/
-  protected showPop: boolean = false;
+  protected showPop: boolean = true;
+  protected checked: boolean = false;
+  protected moneyValue: any = "";
+  // 初始化记账本类型
+  protected setDetailTypeIcon: any = [
+    {
+      id: 0,
+      typeName: "购物",
+      typeIcon: "shopping-cart-o",
+      isActvier: 1,
+    },
+    {
+      id: 1,
+      typeName: "服装美容",
+      typeIcon: "shopping-cart-o",
+      isActvier: 0,
+    },
+    {
+      id: 2,
+      typeName: "餐饮",
+      typeIcon: "shopping-cart-o",
+      isActvier: 0,
+    },
+    {
+      id: 3,
+      typeName: "交通",
+      typeIcon: "shopping-cart-o",
+      isActvier: 0,
+    },
+  ];
+  // 备注
+  protected remark: string = "";
+  // 日历
+  protected showDate: boolean = false;
+  protected inOutDate: string = "";
 
   //#endregion datas ***************************/
 
@@ -41,7 +75,7 @@ export default class PopAddMoneyLog extends Vue {
   @Prop({
     type: Object,
     default: () => {
-      return { height: "70%" };
+      return { height: "80%" };
     },
   })
   protected popStyle: object;
@@ -63,7 +97,10 @@ export default class PopAddMoneyLog extends Vue {
   //#endregion watchers ************************/
 
   //#region life cycle *************************/
-  protected created() {}
+  protected created() {
+    const date = new Date();
+    this.inOutDate = `${date.getMonth() + 1}月${date.getDate()}日`;
+  }
   //#endregion life cycle **********************/
 
   //#region hooks ******************************/
@@ -86,5 +123,33 @@ export default class PopAddMoneyLog extends Vue {
   public isCloseCall() {
     console.log("-------1");
   }
+  protected onInput(checked) {
+    this.$dialog
+      .confirm({
+        title: "提醒",
+        message: "是否切换模式？",
+      })
+      .then(() => {
+        this.checked = checked;
+      });
+  }
+  protected setTypeIconCk(el) {
+    console.log(el);
+  }
+  protected formatDate(date) {
+    return `${date.getMonth() + 1}月${date.getDate()}日`;
+  }
+  // 日历
+  // tslint:disable-next-line:member-ordering
+  public onConfirm(date) {
+    this.inOutDate = this.formatDate(date);
+    this.showDate = false;
+  }
+  protected onInputKeyboard() {
+    let req = {
+      
+    };
+  }
+
   //#endregion methods *************************/
 }
