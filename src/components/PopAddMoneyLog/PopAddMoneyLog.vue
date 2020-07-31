@@ -22,7 +22,7 @@
             <van-switch :value="checked" @input="onInput" />
             <span>收入</span>
           </van-col>
-          <van-col span="5">
+          <van-col span="6">
             <div class="flex-box-center time-bg" @click="showDate = true">
               <span>{{ inOutDate }}</span>
               <van-icon name="arrow-down" size="12" color="#000" />

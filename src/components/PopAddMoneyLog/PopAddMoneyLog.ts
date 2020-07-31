@@ -75,7 +75,7 @@ export default class PopAddMoneyLog extends Vue {
   @Prop({
     type: Object,
     default: () => {
-      return { height: "80%" };
+      return { height: "90%" };
     },
   })
   protected popStyle: object;
@@ -146,9 +146,7 @@ export default class PopAddMoneyLog extends Vue {
     this.showDate = false;
   }
   protected onInputKeyboard() {
-    let req = {
-      
-    };
+    let req = {};
   }
 
   //#endregion methods *************************/
