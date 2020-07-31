@@ -4,6 +4,9 @@
  * @date 2020-07-30 10:06:53
  * @since 0.1.0
  */
+.Detail-main {
+  margin-top: 70px;
+}
 .detail-head-type {
   height: auto;
   background-color: #1989fa;
@@ -63,11 +66,19 @@
 .icon-bg {
   width: 40px;
   height: 40px;
-  background-color: #1989fa;
   border-radius: 50%;
 }
+.icon-bg-color-bule {
+  background-color: #1989fa;
+}
+.icon-bg-color-yellow {
+  background-color: #f4b400;
+}
 .money-row-list {
-  padding: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .money-list-title p {
@@ -80,4 +91,27 @@
 }
 .border-s {
   border-bottom: 1px solid #f0f0f0f0;
+  padding-bottom: 5px;
+}
+.detail-main-box {
+  position: fixed;
+  top: 46px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+}
+.addMoenyLogBtn {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px 0.5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  right: 10px;
+  bottom: 100px;
+  text-align: center;
+  line-height: 40px;
+}
+.addMoenyLogBtn i {
+  line-height: 40px;
 }

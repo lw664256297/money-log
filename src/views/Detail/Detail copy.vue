@@ -122,10 +122,6 @@
       </van-col>
     </van-row>
     <!-- 增加 -->
-    <div class="addMoenyLogBtn" @click="showMoneyEdit">
-      <van-icon name="records" color="#1989fa" size="25" />
-    </div>
-    <PopAddMoneyLog ref="PopAddMoneyLog"></PopAddMoneyLog>
   </div>
 </template>
 <style src="./Detail.scss" lang="scss" scoped></style>
