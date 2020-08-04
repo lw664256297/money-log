@@ -17,6 +17,8 @@ export default class PopAddMoneyLog extends Vue {
   //#region datas ******************************/
   protected showPop: boolean = true;
   protected checked: boolean = false;
+  // 是否为支出还是收入 0 支出 1收入
+  protected isOutInComeType: number = 0;
   protected moneyValue: any = "";
   // 初始化记账本类型
   protected setDetailTypeIcon: any = [
@@ -24,32 +26,38 @@ export default class PopAddMoneyLog extends Vue {
       id: 0,
       typeName: "购物",
       typeIcon: "shopping-cart-o",
-      isActvier: 1,
+      isActvier: 0,
     },
     {
       id: 1,
       typeName: "服装美容",
       typeIcon: "shopping-cart-o",
-      isActvier: 0,
+      isActvier: 1,
     },
     {
       id: 2,
       typeName: "餐饮",
       typeIcon: "shopping-cart-o",
-      isActvier: 0,
+      isActvier: 2,
     },
     {
       id: 3,
       typeName: "交通",
       typeIcon: "shopping-cart-o",
-      isActvier: 0,
+      isActvier: 3,
     },
   ];
   // 备注
   protected remark: string = "";
+  // 备注弹窗
+  protected addRemarkShow: boolean = false;
+  protected remarkBtnName: string = "添加备注";
   // 日历
   protected showDate: boolean = false;
   protected inOutDate: string = "";
+
+  // 列表
+  protected currentItem: number = 0;
 
   //#endregion datas ***************************/
 
@@ -131,10 +139,15 @@ export default class PopAddMoneyLog extends Vue {
       })
       .then(() => {
         this.checked = checked;
+        if (checked === false) {
+          this.isOutInComeType = 0;
+        } else {
+          this.isOutInComeType = 1;
+        }
       });
   }
   protected setTypeIconCk(el) {
-    console.log(el);
+    this.currentItem = el.isActvier;
   }
   protected formatDate(date) {
     return `${date.getMonth() + 1}月${date.getDate()}日`;
@@ -146,7 +159,14 @@ export default class PopAddMoneyLog extends Vue {
     this.showDate = false;
   }
   protected onInputKeyboard() {
-    let req = {};
+    // let req = {};
+  }
+  // 添加备注
+  protected addRemarkShowOk() {
+    if (this.remark !== "") {
+      this.addRemarkShow = false;
+      this.remarkBtnName = "修改";
+    }
   }
 
   //#endregion methods *************************/

@@ -33,7 +33,7 @@
         <div style="height: 20px;"></div>
         <van-row type="flex" justify="center">
           <van-col span="2"><span class="money-fh">¥</span></van-col>
-          <van-col span="15">
+          <van-col span="15" class="pop-money-key">
             <van-field readonly clickable :value="moneyValue" />
             <van-number-keyboard
               v-model="moneyValue"
@@ -55,11 +55,16 @@
               @click="setTypeIconCk(item)"
             >
               <div
-                :class="
-                  item.isActvier === 1
-                    ? 'outincome-icon-bg icon-bg-color-bule'
-                    : 'outincome-icon-bg'
-                "
+                v-if="isOutInComeType === 0"
+                class="outincome-icon-bg"
+                :class="{ 'icon-bg-color-bule': currentItem === index }"
+              >
+                <van-icon :name="item.typeIcon" size="20" color="#fff" />
+              </div>
+              <div
+                v-if="isOutInComeType === 1"
+                class="outincome-icon-bg"
+                :class="{ 'icon-bg-color-yellow': currentItem === index }"
               >
                 <van-icon :name="item.typeIcon" size="20" color="#fff" />
               </div>
@@ -69,13 +74,42 @@
         </div>
 
         <div style="height: 20px;"></div>
-        <!-- 备注 -->
-        <input
-          type="text"
-          v-model="remark"
-          placeholder="添加备注"
-          class="remarkInput"
-        />
+        <!-- 添加备注 -->
+        <div>
+          <span style="padding-left: 10px;">{{ remark }}</span>
+          <span @click="addRemarkShow = true" class="addRemarkp">
+            {{ remarkBtnName }}
+          </span>
+        </div>
+        <!-- 备注弹窗 -->
+        <van-popup
+          v-model="addRemarkShow"
+          position="bottom"
+          round
+          closeable
+          close-icon-position="top-left"
+          :style="{ height: '30%' }"
+        >
+          <van-row type="flex" justify="end" style="margin-top: 12px;">
+            <van-col span="8" style="text-align: center;">
+              <span>请添加备注</span>
+            </van-col>
+            <van-col span="8" style="text-align: right;">
+              <span class="pop-ok-remark" @click="addRemarkShowOk">确定</span>
+            </van-col>
+          </van-row>
+          <van-row type="flex" justify="center">
+            <van-col span="20">
+              <van-field
+                v-model="remark"
+                maxlength="30"
+                show-word-limit
+                placeholder="请输入备注内容"
+                size="12"
+              />
+            </van-col>
+          </van-row>
+        </van-popup>
 
         <!-- 日历 -->
         <van-calendar v-model="showDate" @confirm="onConfirm" />
@@ -85,7 +119,7 @@
 </template>
 <style src="./PopAddMoneyLog.scss" lang="scss" scoped></style>
 <style>
-.moneyLogPop .van-field__control {
+.moneyLogPop .pop-money-key .van-field__control {
   font-weight: bold;
   font-size: 40px;
 }
