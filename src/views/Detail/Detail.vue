@@ -56,7 +56,7 @@
         >
           <div class="money-log-head">
             <van-col span="8">
-              <span>{{ item.time }} 今天</span>
+              <span>{{ item.timeDay }} 今天</span>
             </van-col>
             <van-col span="7" class="money-al-center" offset="2">
               <span class="money-log-title-s">支</span>
