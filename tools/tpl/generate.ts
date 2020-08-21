@@ -1,7 +1,6 @@
 /**
  * Generate component files
  * @date 2019-05-14 12:35:10
- * @author caocao
  */
 
 "use strict";
@@ -21,7 +20,7 @@ function writeFiles(distPath, data) {
       return false;
     }
 
-    files.forEach(filename => {
+    files.forEach((filename) => {
       let content = compileFile(path.join(tplPath, filename), data);
       let distFileName =
         data.componentName +
@@ -56,9 +55,7 @@ export default async function(distPath, data) {
     let answer = await inq.prompt({
       type: "confirm",
       name: "isOverride",
-      message: `The component ${
-        data.componentPath
-      } is exist. Do your want to override it?`
+      message: `The component ${data.componentPath} is exist. Do your want to override it?`,
     });
 
     if (answer["isOverride"]) {
