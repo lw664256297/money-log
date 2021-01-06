@@ -9,7 +9,7 @@
     "cli": "ts-node --project ./tools/tsconfig.json ./tools/cli.ts"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-plugin-import": "^1.13.0",
     "colors": "^1.4.0",
     "core-js": "^3.6.5",
